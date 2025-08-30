@@ -19,7 +19,6 @@ def reorder_documents(documents: List[Document]) -> List[Document]:
         return []
 
     # LongContextReorder 是一個簡單的實作，它會改變文件的順序
-    # 將文件順序從 [1, 2, 3, 4, 5] 變為 [1, 3, 5, 4, 2]
     # 這樣最重要的資訊就分佈在上下文的兩端
     print(f"--- 正在對 {len(documents)} 份文件進行重新排序 (Re-ranking)... ---")
     reorderer = LongContextReorder()
