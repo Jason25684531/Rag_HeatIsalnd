@@ -1,0 +1,28 @@
+忽略所有名為 venv, env, .venv, .env 的資料夾
+/venv/
+/env/
+/.venv/
+/.env/
+
+Python 相關快取與套件檔案
+pycache/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+
+環境變數檔案
+.env
+
+IDE 與編輯器設定
+.vscode/
+.idea/
+*.swp
+
+ChromaDB 本機資料庫
+/data/
+
+requirements.txt

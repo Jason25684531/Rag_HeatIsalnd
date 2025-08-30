@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Chat with Gemini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto max-w-4xl h-screen flex flex-col p-4">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-4">RAG Chat Bot (Gemini + ChromaDB)</h1>
+
+        <div id="chat-window" class="flex-1 bg-white border rounded-lg p-4 overflow-y-auto mb-4">
+            </div>
+
+        <div class="flex items-center space-x-2">
+            <input type="text" id="message-input" class="flex-1 border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="在這裡輸入您的問題...">
+            <button id="send-btn" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600">傳送</button>
+        </div>
+        
+        <div class="mt-4 p-4 border rounded-lg bg-gray-50">
+            <h2 class="font-semibold mb-2">上傳知識庫文件 (.txt)</h2>
+            <form id="upload-form" class="flex items-center space-x-2">
+                <input type="file" id="file-input" class="file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                <button type="submit" class="bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600">上傳</button>
+            </form>
+            <div id="upload-status" class="text-sm mt-2 text-gray-600"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

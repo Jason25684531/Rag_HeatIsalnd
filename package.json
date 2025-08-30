@@ -1,0 +1,10 @@
+{
+  "name": "rag-project",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "tailwindcss build -o app/static/css/style.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.0"
+  }
+}
